@@ -1,85 +1,105 @@
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
 
-    <title>ZFITNESS || signup </title>
-    <link rel="stylesheet" href="inup.css">
-</head>
+    <title>ZFITNESS || signup</title>
+    <link rel="stylesheet" href="inup.css" />
+  </head>
 
-<body>
- 
+  <body>
     <h2>BE STRONGER , NEVER GIVE UP</h2>
 
     <div class="container" id="container">
-        <div class="form-container sign-up-container">
-            <form action="" method="">
-                <h1>Create Account</h1>
-                <div class="social-container">
-                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-                    <a href="#" class="social"><i class="fab fa-twitter"></i></a>
-                </div>
-                <span>or use your email for registration</span>
+      <div class="form-container sign-up-container">
+        <form action="" method="">
+          <h1>Create Account</h1>
+          <div class="social-container">
+            <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+            <a href="#" class="social"><i class="fab fa-twitter"></i></a>
+          </div>
+          <span>or use your email for registration</span>
 
-                <input name="email" type="email" placeholder="Email" required />
-                <input name="password" type="password" placeholder="Password" required />
-                <input name="cpassword" type="password" placeholder="Confirm Password" required />
-                <button><a href="/signup.html" >Sign Up</a></button>
-            </form>
+          <input name="email" type="email" placeholder="Email" required />
+          <input
+            name="password"
+            type="password"
+            placeholder="Password"
+            required
+          />
+          <input
+            name="cpassword"
+            type="password"
+            placeholder="Confirm Password"
+            required
+          />
+          <button><a href="/signup.html">Sign Up</a></button>
+        </form>
+      </div>
+      <div class="overlay-container">
+        <div class="overlay">
+          <div class="overlay-panel overlay-right">
+            <h1>Welcome Back!</h1>
+            <p>
+              To keep connected with us please login with your personal info
+            </p>
+            <button class="ghost" id="signIn" onclick="myOnClickFn()">
+              Sign in
+            </button>
+            <br />
+            <button class="ghost" id="signIn" onclick="myOnClickFn2()">
+              Admin Sign in
+            </button>
+          </div>
         </div>
-        <div class="overlay-container">
-            <div class="overlay">
-                <div class="overlay-panel overlay-right">
-                    <h1>Welcome Back!</h1>
-                    <p>To keep connected with us please login with your personal info</p>
-                    <button class="ghost" id="signIn" onclick="myOnClickFn()">Sign
-                            in</button>
-                    <br>
-                    <button class="ghost" id="signIn" onclick="myOnClickFn2()">Admin Sign
-                            in</button>
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
 
     <footer>
-        <p>
-            <a target="_blank" href="/landing.html">ZFITNESS</a>
-            created by subham haldar , &copy; 2021
-            <a  href="#"> click here</a>.
-        </p>
+      <p>
+        <a target="_blank" href="/index.html">ZFITNESS</a>
+        created by subham haldar , &copy; 2021
+        <a href="#"> click here</a>.
+      </p>
     </footer>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
-        crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
-    
+
     <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script> -->
-   
-    <script >
-          function myOnClickFn(){
-              document.location.href="signin.html";
-          }
-          function myOnClickFn2(){
-              document.location.href="adminsignin.html";
-          }
-      </script>
-</body>
 
+    <script>
+      function myOnClickFn() {
+        document.location.href = "signin.html";
+      }
+      function myOnClickFn2() {
+        document.location.href = "adminsignin.html";
+      }
+    </script>
+  </body>
 </html>
