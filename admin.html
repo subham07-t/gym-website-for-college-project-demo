@@ -1,0 +1,241 @@
+
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="//cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+
+
+    <title>ZFITNESS || ADMIN </title>
+
+</head>
+
+<body>
+
+
+    <!-- Edit Modal -->
+    <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editModalLabel">Edit this Info</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <form action="/project_gym/admin.php" method="POST">
+                    <div class="modal-body">
+                        <input type="hidden" name="snoEdit" id="snoEdit">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="nameEdit" name="nameEdit"
+                                aria-describedby="emailHelp">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="emailEdit" name="emailEdit" rows="3"></input>
+                        </div>
+                        <div class="form-group">
+                            <label for="age">Age</label>
+                            <input type="number" class="form-control" id="ageEdit" name="ageEdit" rows="3"></input>
+                        </div>
+                        <div class="form-group">
+                            <label for="gender">Gender</label>
+                            <input type="text" class="form-control" id="genderEdit" name="genderEdit" rows="3"></input>
+                        </div>
+                        <div class="form-group">
+                            <label for="pno">Phone No</label>
+                            <input type="contact" class="form-control" id="pnoEdit" name="pnoEdit" rows="3"></input>
+                        </div>
+                        <div class="form-group">
+                            <label for="course">Course name</label>
+                            <input type="text" class="form-control" id="courseEdit" name="courseEdit" rows="3"></input>
+                        </div>
+                    </div>
+                    <div class="modal-footer d-block mr-auto">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Save changes</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#"><img src="#" height="28px" alt=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" class=" logo" href="#">ZFITNESS<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/admin.html">Member info</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/messages.html">Messages</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/landing.html">Log Out</a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="container my-4">
+        <h2>Add Member Details</h2>
+        <form action="" method="">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" name="name" aria-describedby="emailHelp">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" name="email" rows="3"></input>
+            </div>
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="number" class="form-control" id="age" name="age" rows="3"></input>
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <input type="text" class="form-control" id="gender" name="gender" rows="3"></input>
+            </div>
+            <div class="form-group">
+                <label for="pno">Phone No</label>
+                <input type="number" class="form-control" id="pno" name="pno" rows="3"></input>
+            </div>
+            <div class="form-group">
+                <label for="course">Course Name</label>
+                <input type="text" class="form-control" id="course" name="course" rows="3"></input>
+            </div>
+            <button type="submit" class="btn btn-primary">Add </button>
+        </form>
+    </div>
+
+    <div class="container my-4">
+
+
+        <table class="table" id="myTable">
+            <thead>
+                <tr>
+                    <th scope="col">S.No</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Age</th>
+                    <th scope="col">Gender</th>
+                    <th scope="col">Phone no.</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+        <tr>
+            <th scope='row'></th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td> <button class='edit btn btn-sm btn-primary' id=".$row['sno'].">Edit</button> <button class='delete btn btn-sm btn-primary' id=d".$row['sno'].">Delete</button>  </td>
+          </tr>
+        
+         
+
+
+            </tbody>
+        </table>
+    </div>
+    <hr>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="//cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+
+
+
+
+
+    <script>
+        $(document).ready(function () {
+            $('#myTable').DataTable();
+
+        });
+    </script>
+
+    <script>
+        edits = document.getElementsByClassName('edit');
+        Array.from(edits).forEach((element) => {
+            element.addEventListener("click", (e) => {
+                console.log("edit ");
+                tr = e.target.parentNode.parentNode;
+                name = tr.getElementsByTagName("td")[0].innerText;
+                email = tr.getElementsByTagName("td")[1].innerText;
+                age = tr.getElementsByTagName("td")[2].innerText;
+                gender = tr.getElementsByTagName("td")[3].innerText;
+                pno = tr.getElementsByTagName("td")[4].innerText;
+                course = tr.getElementsByTagName("td")[5].innerText;
+                console.log(name, email, age, gender, pno, course);
+                nameEdit.value = name;
+                emailEdit.value = email;
+                genderEdit.value = gender;
+                ageEdit.value = age;
+                pnoEdit.value = pno;
+                courseEdit.value = course;
+                snoEdit.value = e.target.id;
+                console.log(e.target.id)
+                $('#editModal').modal('toggle');
+            })
+        })
+
+        deletes = document.getElementsByClassName('delete');
+        Array.from(deletes).forEach((element) => {
+            element.addEventListener("click", (e) => {
+                console.log("edit ");
+                sno = e.target.id.substr(1);
+
+                if (confirm("Are you sure you want to delete this note!")) {
+                    console.log("yes");
+                    window.location = `/project_gym/admin.php?delete=${sno}`;
+                    // TODO: Create a form and use post request to submit a form
+                }
+                else {
+                    console.log("no");
+                }
+            })
+        })
+    </script>
+    <script >
+        function myOnClickFn(){
+            document.location.href="admin.html";
+        }
+    </script>
+</body>
+
+</html>
