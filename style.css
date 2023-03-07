@@ -87,22 +87,11 @@ button:hover {
   background-color: #111;
   background-size: cover;
   min-height: 100vh;
-  width: 100%;
+  width: 100vw;
   overflow: hidden;
   position: relative;
 }
 .home-content {
-  /* position: absolute;
-  right: 0;
-  width: 100%;
-  min-height: 100vh;
-  padding: 100px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  background: #111;
-  transition: 0.5%; */
-
   position: absolute;
   top: 50%;
   left: 50%;
@@ -115,7 +104,7 @@ button:hover {
 .overlay {
   position: absolute;
   top: 0px;
-  left: 0;
+  left: 0px;
   width: 100%;
   height: 100%;
   background: linear-gradient(to left, #00f, #f00);
@@ -138,14 +127,8 @@ button:hover {
 }
 
 .home-content h4 {
-  /* font-size: 3em;
-  font-weight: 700;
-  color: #fff;
-  line-height: 1em;
-  text-transform: uppercase; */
   position: relative;
   font-size: 3em;
-  /* margin-bottom: 30px; */
   color: white;
   font-weight: 700;
   letter-spacing: -0.5px;
@@ -157,17 +140,9 @@ button:hover {
   text-transform: uppercase;
 }
 .home-content h2 {
-  /*  word-spacing: 13px;
-  font-size: 6em;
-  font-weight: 800;
-  color: #fff;
-  line-height: 1em;
-  text-transform: uppercase; */
   position: relative;
   color: white;
-  /* margin-bottom: 30px; */
   font-size: 6em;
-  /* width: 96%; */
   letter-spacing: -0.5px;
   font-weight: 800;
   line-height: 1em;
@@ -178,16 +153,12 @@ button:hover {
   padding-left: 60px;
 }
 .home-content p {
-  /* position: relative; */
   font-size: 1.1em;
-  /* margin: 20px 0; */
   font-weight: 400;
   max-width: 672px;
   color: #fff;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  padding-left: 50px;
+  text-align: left;
+  padding-left: 60px;
   padding-right: 50px;
 }
 
@@ -195,7 +166,7 @@ button:hover {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding-left: 55px;
+  padding-left: 60px;
 }
 .btnr a {
   display: inline-block;
@@ -550,5 +521,30 @@ iframe {
     width: 1px;
     height: 93%;
     background-color: #131212;
+  }
+}
+@media (max-width: 768px) {
+  .home-content h4 {
+    font-size: 1.5rem;
+    padding-left: 30px;
+  }
+  .home-content h2 {
+    font-size: 3rem;
+    letter-spacing: -0.5px;
+    font-weight: 800;
+    padding-left: 30px;
+    text-align: left;
+  }
+  .home-content p {
+    font-size: 1.1em;
+    font-weight: 400;
+    padding-left: 30px;
+  }
+
+  .btnr {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 30px;
   }
 }
