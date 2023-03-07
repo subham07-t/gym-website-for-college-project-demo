@@ -1,7 +1,7 @@
 
 # Simple static gym website !! 💪
 
-### ✨ [Demo](https://dear-ui-virid.vercel.app/)
+### ✨ [Demo](https://gym-website-for-college-project-demo.vercel.app/)
 
 ## Tools used
 
